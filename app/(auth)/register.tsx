@@ -19,19 +19,19 @@ export default function RegisterScreen() {
 
   async function handleRegister() {
     if (!email || !password || !confirmPassword) {
-      Alert.alert("خطأ", "من فضلك املى كل البيانات");
-      setError("من فضلك املى كل البيانات");
+      Alert.alert("Error: Please enter email and password");
+      setError("Please enter email and password");
       return;
     }
 
     if (password.length < 6) {
-      Alert.alert("خطأ", "كلمة المرور لازم تكون 6 حروف على الأقل");
-      setError("كلمة المرور لازم تكون 6 حروف على الأقل");
+      Alert.alert("Error: Password must be at least 6 characters");
+      setError("Password must be at least 6 characters");
       return;
     }
 
     if (password !== confirmPassword) {
-      Alert.alert("خطأ", "كلمتا المرور غير متطابقتين");
+      Alert.alert("Error: Passwords do not match");
       return;
     }
 
